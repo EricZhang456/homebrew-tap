@@ -7,14 +7,10 @@ class PowerlineStatus < Formula
   sha256 "9e846af9379b57e410efe264cff3a6b98eb78dd9526e83016776ae5ffc5798f4"
   license "MIT"
 
-  bottle do
-    root_url "https://ghcr.io/v2/ericzhang456/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "37b65566d41bdcb774111783d5d08bf5b113133c7b9591debb6202f0769b54f5"
-    sha256 cellar: :any_skip_relocation, sequoia:      "65c5a2ba583d7fea7513c5d8e8221d77563831648bc0af6d5cd88aaa9940c820"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "28915a33f2582a58dc32b1ef373498a3a9fdbb783fc90925e1e092e508d7592b"
-  end
+  revision 2
 
   depends_on "python@3.14"
+  depends_on "sphinx-doc" => :build
 
   def python3
     "python3.14"
@@ -31,8 +27,19 @@ class PowerlineStatus < Formula
     venv.pip_install resources
     venv.pip_install_and_link buildpath
     (prefix/Language::Python.site_packages(python3)/"homebrew-powerline-status.pth").write venv.site_packages
-    (share/"vim/vimfiles/plugin/powerline.vim").install Dir[
-      venv.site_packages/"powerline/bindings/vim/plugin/powerline.vim"]
+
+    (share/"powerline").install_symlink venv.site_packages/"powerline/bindings"
+
+    cd "docs" do
+      system "make", "man"
+      man1.install Dir["_build/man/*"]
+    end
+  end
+
+  def caveats
+    <<~EOS
+      Powerline bindings have been installed to #{share}/powerline/bindings
+    EOS
   end
 
   test do
