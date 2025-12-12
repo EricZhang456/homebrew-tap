@@ -9,6 +9,12 @@ class PowerlineStatus < Formula
 
   revision 1
 
+  bottle do
+    root_url "https://ghcr.io/v2/ericzhang456/tap"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "2b2e0410c8e47326e4e8abd1f910a53b21efa7181cdc9baef64345090be92fde"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f35fabfa02d2f11072f30e546d6ff9f50ce7c3a4cb73fc9baec8771328e4ab5f"
+  end
+
   depends_on "sphinx-doc" => :build
   depends_on "python@3.14"
 
