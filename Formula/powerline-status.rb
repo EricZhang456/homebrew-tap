@@ -7,6 +7,13 @@ class PowerlineStatus < Formula
   sha256 "9e846af9379b57e410efe264cff3a6b98eb78dd9526e83016776ae5ffc5798f4"
   license "MIT"
 
+  bottle do
+    root_url "https://ghcr.io/v2/ericzhang456/tap"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "37b65566d41bdcb774111783d5d08bf5b113133c7b9591debb6202f0769b54f5"
+    sha256 cellar: :any_skip_relocation, sequoia:      "65c5a2ba583d7fea7513c5d8e8221d77563831648bc0af6d5cd88aaa9940c820"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "28915a33f2582a58dc32b1ef373498a3a9fdbb783fc90925e1e092e508d7592b"
+  end
+
   depends_on "python@3.14"
 
   def python3
