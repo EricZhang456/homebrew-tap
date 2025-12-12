@@ -7,7 +7,7 @@ class PowerlineStatus < Formula
   sha256 "9e846af9379b57e410efe264cff3a6b98eb78dd9526e83016776ae5ffc5798f4"
   license "MIT"
 
-  revision 2
+  revision 1
 
   depends_on "sphinx-doc" => :build
   depends_on "python@3.14"
