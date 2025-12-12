@@ -9,8 +9,8 @@ class PowerlineStatus < Formula
 
   revision 2
 
-  depends_on "python@3.14"
   depends_on "sphinx-doc" => :build
+  depends_on "python@3.14"
 
   def python3
     "python3.14"
