@@ -11,8 +11,9 @@ class PowerlineStatus < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/ericzhang456/tap"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "2b2e0410c8e47326e4e8abd1f910a53b21efa7181cdc9baef64345090be92fde"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "f35fabfa02d2f11072f30e546d6ff9f50ce7c3a4cb73fc9baec8771328e4ab5f"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "42127c7509a01ebeef1b9ab85bb7c0cc357ef144ec58214ad277c4c4a265a928"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "8d27847cae0b74b424c24ece63465cdaa6f12dcb19a00ba2be949b914965b817"
+    sha256 cellar: :any,                 x86_64_linux:      "6092de34d0281457a82b42a4628610619b7fa45ca1c78966dd2af530c8a2a495"
   end
 
   depends_on "sphinx-doc" => :build
