@@ -7,7 +7,7 @@ class PowerlineStatus < Formula
   sha256 "9e846af9379b57e410efe264cff3a6b98eb78dd9526e83016776ae5ffc5798f4"
   license "MIT"
 
-  revision 1
+  revision 2
 
   bottle do
     root_url "https://ghcr.io/v2/ericzhang456/tap"
