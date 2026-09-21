@@ -7,8 +7,10 @@ class Neofetch < Formula
   head "https://github.com/dylanaraps/neofetch.git", branch: "master"
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any_skip_relocation, all: "1382d315f586920f24251b6cd7a79b1c940634d073b42c72007ed87a796d1efc"
+    root_url "https://ghcr.io/v2/ericzhang456/tap"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "510b65855babb9c5ef06e56525a1e2e04cf9bda6381bfc6ec7455b5b9968f951"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fc5e8450fad256a39e586fb16bbf4d4ff4a6142a165297bf5b59aeaf6d3c9a5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:      "e60b1552810820bd011e768e5fbfd6d732aa26df7c8fbb1a0165850945ebc479"
   end
 
   deprecate! date: "2024-05-04", because: :repo_archived
