@@ -5,6 +5,8 @@ class Unrar < Formula
   sha256 "634900842a3737d9cc15bbcc71d4c74cc713437e0bca296a573424fe5f2660ab"
   license "UnRAR"
 
+  revision 1
+
   bottle do
     root_url "https://ghcr.io/v2/ericzhang456/tap"
     sha256 cellar: :any_skip_relocation, arm64_golden_gate: "573665a0eac82d26ec322f195e6b6743f132b8cf24218914c58d8c369a60fac4"
@@ -13,6 +15,7 @@ class Unrar < Formula
   end
 
   depends_on "coreutils" => :build
+  conflicts_with "rar", because: "rar also ships with unrar"
 
   patch :DATA
 
