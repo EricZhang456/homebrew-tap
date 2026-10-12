@@ -9,9 +9,9 @@ class Unrar < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/ericzhang456/tap"
-    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "573665a0eac82d26ec322f195e6b6743f132b8cf24218914c58d8c369a60fac4"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fe2606680b5d5bc2a0e397734180f7816e417e29167e3fbd52d67df010f81a2d"
-    sha256 cellar: :any,                 x86_64_linux:      "7aec88768f55bd9fd4b363379c2c8cd9fc4350232862694beecaef6ff10e2c8a"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "fe0056f74aee42ef329add57b7cea9d868fd20f3d62f5694245a6413375e26bb"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "d2af69e730fec3461fd719fe13c9b7c553150df5c0c98cdc16ccf3e06c3bf63a"
+    sha256 cellar: :any,                 x86_64_linux:      "b384fb95d0fab4dd195034af2999388ade3fba27af91efbedacc5bea9abd2199"
   end
 
   depends_on "coreutils" => :build
