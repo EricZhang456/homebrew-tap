@@ -15,7 +15,7 @@ class Unrar < Formula
   end
 
   depends_on "coreutils" => :build
-  conflicts_with "rar", because: "rar also ships with unrar"
+  conflicts_with cask: "rar", because: "rar also ships with unrar"
 
   patch :DATA
 
