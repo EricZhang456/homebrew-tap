@@ -1,15 +1,15 @@
 class Unrar < Formula
-  desc "The RAR uncompression program"
+  desc "Unarchiver for .rar files"
   homepage "https://www.rarlab.com/rar_add.htm"
   url "https://www.rarlab.com/rar/unrarsrc-7.3.1.tar.gz"
   sha256 "634900842a3737d9cc15bbcc71d4c74cc713437e0bca296a573424fe5f2660ab"
   license "UnRAR"
 
+  depends_on "coreutils" => :build
+
+  patch :DATA
 
   deny_network_access!
-
-  depends_on "coreutils" => :build
-  patch :DATA
 
   def install
     ENV.deparallelize
