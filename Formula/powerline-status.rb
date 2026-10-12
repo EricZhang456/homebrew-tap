@@ -7,7 +7,7 @@ class PowerlineStatus < Formula
   sha256 "9e846af9379b57e410efe264cff3a6b98eb78dd9526e83016776ae5ffc5798f4"
   license "MIT"
 
-  revision 2
+  revision 3
 
   bottle do
     root_url "https://ghcr.io/v2/ericzhang456/tap"
@@ -17,16 +17,16 @@ class PowerlineStatus < Formula
   end
 
   depends_on "sphinx-doc" => :build
-  depends_on "python@3.14"
+  depends_on "python@3.15"
 
   def python3
-    "python3.14"
+    "python3.15"
   end
 
   # Python 3.13+ fixes
   patch do
-    url "https://github.com/powerline/powerline/compare/574bb18...c8640b9.patch?full_index=1"
-    sha256 "f99de5f78c20f992d60db0f72810989dc028083825d5f266c2be75fc69823c7c"
+    url "https://github.com/powerline/powerline/commit/11808cbe5c16e4621edcaefa916b5add81eab799.patch?full_index=1"
+    sha256 "5ecc4ac562dbdc9d50a77cb3164e69e419811b590ef0f7743df39b656f1c6720"
   end
 
   def install
