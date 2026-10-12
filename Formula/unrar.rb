@@ -5,6 +5,13 @@ class Unrar < Formula
   sha256 "634900842a3737d9cc15bbcc71d4c74cc713437e0bca296a573424fe5f2660ab"
   license "UnRAR"
 
+  bottle do
+    root_url "https://ghcr.io/v2/ericzhang456/tap"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "573665a0eac82d26ec322f195e6b6743f132b8cf24218914c58d8c369a60fac4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "fe2606680b5d5bc2a0e397734180f7816e417e29167e3fbd52d67df010f81a2d"
+    sha256 cellar: :any,                 x86_64_linux:      "7aec88768f55bd9fd4b363379c2c8cd9fc4350232862694beecaef6ff10e2c8a"
+  end
+
   depends_on "coreutils" => :build
 
   patch :DATA
