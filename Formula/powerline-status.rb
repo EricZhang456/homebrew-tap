@@ -7,7 +7,7 @@ class PowerlineStatus < Formula
   sha256 "9e846af9379b57e410efe264cff3a6b98eb78dd9526e83016776ae5ffc5798f4"
   license "MIT"
 
-  revision 3
+  revision 4
 
   bottle do
     root_url "https://ghcr.io/v2/ericzhang456/tap"
@@ -47,6 +47,11 @@ class PowerlineStatus < Formula
     <<~EOS
       Powerline bindings have been installed to #{share}/powerline/bindings
     EOS
+  end
+
+  service do
+    run [opt_bin/"powerline-daemon", "--foreground"]
+    keep_alive true
   end
 
   test do
